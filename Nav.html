@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="Nav.css">  
+    <title>Navbar Example</title>  
+</head>  
+<body id="body">
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#">Ticket Box</a>
+            </li>
+            <li class="navbar-item">
+                <div class="search">
+                    <ion-icon class="search-item" name="search-outline"></ion-icon>
+                    <input class="search-item" type="text" placeholder="What do you want to search?">
+                    <button class="search-item" type="button">Tìm kiếm</button>
+                </div>
+            </li>
+            <li class="navbar-item">
+                <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            </li>
+            <li class="navbar-item">
+                <a href="#"><ion-icon name="ticket-outline"></ion-icon></a>
+            </li>
+            <li class="navbar-item">
+                <button class="navbar-itemLoginRegister" type="button" onclick="CancelHidden()">
+                    <span class="navbar-itemLoginRegister--login">Login</span>
+                    <span class="navbar-itemLoginRegister--register">Register</span>  
+                </button>
+            </li>
+        </ul>
+    </nav>  
+    
+    <div id="overlay" class="hidden"></div>
+
+    <!-- Phần login -->
+    <section id="Login" class="Login hidden">
+        <form>
+            <h1 class="loginRegister-heading">Log in</h1>
+            <div class="inputBox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" placeholder="" required>
+                <label for="username" type="Email">Email</label>
+            </div>
+
+            <div class="inputBox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="" required>
+                <label for="password">Password</label>
+            </div>
+            
+            <div class="forget">
+                <label for=""><input type="checkbox">Remember Me</label>
+                <a href="#">Forget Password</a>
+            </div>
+
+            <button class="submitButton" type="submit">Log in</button>
+            <div class="Login_Register">
+                <label>Don't have an account? </label>
+                <button>Register</button>
+            </div>
+        </form>
+    </section>
+    
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+</body>
+</html>
